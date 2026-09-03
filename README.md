@@ -2,15 +2,21 @@
 
 One-page cinematic portfolio resume for **Vishnumolakala Manikanta Sai** (DevOps & SRE).
 
-## Open on phone (iOS / Android)
+## Fix GitHub Pages 404 (do this once)
 
-### Permanent public URL (GitHub Pages)
+Your code is already on `main`. Pages just needs to be turned on.
 
-1. Go to [Repo Settings → Pages](https://github.com/Manikantasaiv26/My-portfolio/settings/pages)
-2. Under **Build and deployment → Source**, select **GitHub Actions**
-3. Open: **https://manikantasaiv26.github.io/My-portfolio/**
+1. Open: https://github.com/Manikantasaiv26/My-portfolio/settings/pages  
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**  
+3. Branch: **main**  
+4. Folder: **/ (root)**  
+5. Click **Save**  
+6. Wait 1–2 minutes, then open:  
+   **https://manikantasaiv26.github.io/My-portfolio/**
 
-### Open locally
+If it still shows 404, hard-refresh or wait another minute for DNS.
+
+## Open locally
 
 ```bash
 python3 -m http.server 8080
