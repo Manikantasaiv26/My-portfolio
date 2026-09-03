@@ -14,7 +14,15 @@
   const imageB = document.getElementById("heroImageB");
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const isMobile = () => window.innerWidth <= 980;
+  const isMobile = () => window.matchMedia("(max-width: 980px)").matches;
+
+  function hideLoader() {
+    if (loader) loader.classList.add("hidden");
+    document.body.classList.add("is-ready");
+  }
+
+  // Failsafe: never leave phones stuck on the loading screen
+  window.setTimeout(hideLoader, 2500);
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
@@ -40,16 +48,16 @@
 
   function runLoader() {
     let progress = 0;
-    const step = reducedMotion ? 20 : 2;
+    const step = reducedMotion || isMobile() ? 10 : 2;
     const timer = setInterval(() => {
       progress = Math.min(100, progress + step);
-      loaderPercent.textContent = progress + "%";
-      loaderBar.style.width = progress + "%";
+      if (loaderPercent) loaderPercent.textContent = progress + "%";
+      if (loaderBar) loaderBar.style.width = progress + "%";
       if (progress === 100) {
         clearInterval(timer);
-        setTimeout(() => loader.classList.add("hidden"), reducedMotion ? 0 : 280);
+        setTimeout(hideLoader, reducedMotion ? 0 : 220);
       }
-    }, reducedMotion ? 10 : 18);
+    }, reducedMotion || isMobile() ? 12 : 18);
   }
 
   function clamp(num, min, max) {
@@ -57,6 +65,7 @@
   }
 
   function applyScene(index) {
+    if (!title || !subtitle || !side) return;
     const scene = scenes[index];
     title.innerHTML = scene.title.replace("\n", "<br>");
     subtitle.textContent = scene.sub;
@@ -64,10 +73,17 @@
   }
 
   function updateHero() {
-    if (!hero || isMobile() || reducedMotion) {
+    if (!hero || !imageA || !imageB) return;
+
+    if (isMobile() || reducedMotion) {
       applyScene(0);
       imageA.style.opacity = "1";
       imageB.style.opacity = "0";
+      imageA.style.transform = "";
+      imageB.style.transform = "";
+      title.style.transform = "";
+      subtitle.style.transform = "";
+      side.style.transform = "";
       return;
     }
 
@@ -93,6 +109,12 @@
 
   function initReveal() {
     const items = document.querySelectorAll(".reveal");
+
+    // Always show content eventually (important for iOS/Android)
+    window.setTimeout(() => {
+      items.forEach((el) => el.classList.add("visible"));
+    }, 1800);
+
     if (reducedMotion || !("IntersectionObserver" in window)) {
       items.forEach((el) => el.classList.add("visible"));
       return;
@@ -107,11 +129,25 @@
           }
         });
       },
-      { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.08, rootMargin: "0px 0px -5% 0px" }
     );
 
     items.forEach((el) => observer.observe(el));
   }
+
+  // Mobile nav: open Hire Me / sections smoothly
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const id = link.getAttribute("href");
+      if (!id || id === "#") return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      event.preventDefault();
+      const offset = 76;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  });
 
   runLoader();
   applyScene(0);
@@ -120,4 +156,8 @@
 
   window.addEventListener("scroll", updateHero, { passive: true });
   window.addEventListener("resize", updateHero);
+  window.addEventListener("orientationchange", () => {
+    window.setTimeout(updateHero, 150);
+  });
+  window.addEventListener("load", hideLoader);
 })();
