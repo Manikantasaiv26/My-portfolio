@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Vishnumolakala Manikanta Sai — DevOps & Site Reliability Engineer. 4+ years AWS & Azure cloud expertise.">
+  <meta name="theme-color" content="#000000">
+  <title>Manikanta Sai | DevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg">
+</head>
+<body>
+  <div class="desktop-frame">
+    <div class="phone-shell">
+      <div class="phone-notch"></div>
+
+      <div class="reels-app" id="reelsApp">
+        <!-- Progress bars -->
+        <div class="story-progress" id="storyProgress"></div>
+
+        <!-- Header -->
+        <header class="reel-header">
+          <div class="reel-user">
+            <img src="assets/profile-headshot.jpg" alt="Manikanta Sai" class="reel-avatar">
+            <div class="reel-user-info">
+              <span class="reel-username">manikanta_devops</span>
+              <span class="reel-subtitle">DevOps • SRE • Cloud</span>
+            </div>
+          </div>
+          <button class="reel-follow" id="followBtn">Follow</button>
+        </header>
+
+        <!-- Side actions -->
+        <aside class="reel-actions">
+          <button class="action-btn liked" aria-label="Like">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.024l2.142 2.142c.405.405.82.809 1.243 1.191l.333.315c.43-.409.855-.818 1.27-1.227l.347-.328c.716-.695 1.404-1.364 2.053-2.008 2.512-2.512 5.013-5.013 5.013-8.012A6.985 6.985 0 0 0 16.792 1.904z"/></svg>
+            <span class="action-count" id="likeCount">4.2K</span>
+          </button>
+          <button class="action-btn" aria-label="Comment">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z"/></svg>
+            <span class="action-count">128</span>
+          </button>
+          <button class="action-btn" aria-label="Share">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span class="action-count">Share</span>
+          </button>
+          <button class="action-btn" aria-label="Save">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="19 21 12 16 5 21 5 3 19 3 19 21"/></svg>
+          </button>
+          <a href="assets/resume.pdf" download class="action-btn resume-btn" aria-label="Download Resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span class="action-count">CV</span>
+          </a>
+        </aside>
+
+        <!-- Slides container -->
+        <main class="reels-container" id="reelsContainer">
+
+          <!-- Slide 1: Hero -->
+          <section class="reel-slide active" data-slide="0">
+            <div class="slide-bg bg-hero"></div>
+            <div class="slide-content hero-content">
+              <div class="hero-photo-wrap">
+                <img src="assets/profile-full.jpg" alt="Manikanta Sai" class="hero-photo">
+              </div>
+              <p class="slide-tag">👋 Swipe up to explore</p>
+              <h1 class="hero-name">Manikanta<br><span>Sai</span></h1>
+              <p class="hero-title">DevOps & Site Reliability Engineer</p>
+              <div class="hero-stats">
+                <div class="stat"><strong>4+</strong><span>Years</span></div>
+                <div class="stat"><strong>AWS</strong><span>& Azure</span></div>
+                <div class="stat"><strong>24×7</strong><span>Support</span></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 2: About -->
+          <section class="reel-slide" data-slide="1">
+            <div class="slide-bg bg-about"></div>
+            <div class="slide-content">
+              <span class="slide-label">About Me</span>
+              <h2 class="slide-title">Building Reliable<br>Cloud Systems</h2>
+              <p class="slide-text">
+                DevOps & SRE with <strong>4 years</strong> managing scalable, production-grade systems across <strong>AWS</strong> and <strong>Azure</strong>. Specialized in Kubernetes, Terraform IaC, and robust CI/CD pipelines.
+              </p>
+              <div class="highlight-cards">
+                <div class="highlight-card">
+                  <span class="highlight-icon">☸️</span>
+                  <span>Kubernetes & AKS</span>
+                </div>
+                <div class="highlight-card">
+                  <span class="highlight-icon">🏗️</span>
+                  <span>Terraform IaC</span>
+                </div>
+                <div class="highlight-card">
+                  <span class="highlight-icon">🔄</span>
+                  <span>CI/CD Pipelines</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 3: Skills -->
+          <section class="reel-slide" data-slide="2">
+            <div class="slide-bg bg-skills"></div>
+            <div class="slide-content">
+              <span class="slide-label">Tech Stack</span>
+              <h2 class="slide-title">Skills &<br>Tools</h2>
+              <div class="skill-groups">
+                <div class="skill-group">
+                  <h3>☁️ Cloud</h3>
+                  <div class="skill-tags">
+                    <span>AWS</span><span>Azure</span><span>EC2</span><span>S3</span>
+                    <span>AKS</span><span>ACR</span><span>ACI</span><span>ARO</span><span>EKS</span>
+                  </div>
+                </div>
+                <div class="skill-group">
+                  <h3>🛠️ DevOps</h3>
+                  <div class="skill-tags">
+                    <span>Docker</span><span>Kubernetes</span><span>Terraform</span>
+                    <span>Azure DevOps</span><span>Bicep</span><span>Jenkins</span>
+                  </div>
+                </div>
+                <div class="skill-group">
+                  <h3>📊 Monitoring</h3>
+                  <div class="skill-tags">
+                    <span>CloudWatch</span><span>ELK</span><span>Azure Monitor</span>
+                    <span>Log Analytics</span><span>AppLens</span>
+                  </div>
+                </div>
+                <div class="skill-group">
+                  <h3>💻 Languages</h3>
+                  <div class="skill-tags">
+                    <span>PowerShell</span><span>YAML</span><span>Bash</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 4: Current Role -->
+          <section class="reel-slide" data-slide="3">
+            <div class="slide-bg bg-exp1"></div>
+            <div class="slide-content">
+              <span class="slide-label">Current Role</span>
+              <div class="exp-card featured">
+                <div class="exp-header">
+                  <div class="exp-logo">INF</div>
+                  <div>
+                    <h3>Senior Associate Consultant</h3>
+                    <p class="exp-company">Infosys • Bangalore</p>
+                  </div>
+                </div>
+                <p class="exp-date">May 2025 — Present</p>
+                <ul class="exp-list">
+                  <li>Troubleshoot AKS environments for high availability</li>
+                  <li>Resolve issues across ARO, ACI & ACR platforms</li>
+                  <li>Production RCA & Severity A incident management</li>
+                  <li>Azure Security Center, AppLens & Jarvis analysis</li>
+                  <li>24×7 global support for Azure container services</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 5: Project Musgrave -->
+          <section class="reel-slide" data-slide="4">
+            <div class="slide-bg bg-exp2"></div>
+            <div class="slide-content">
+              <span class="slide-label">Project</span>
+              <div class="exp-card">
+                <div class="exp-header">
+                  <div class="exp-logo client">MUS</div>
+                  <div>
+                    <h3>DevOps Engineer</h3>
+                    <p class="exp-company">Musgrave • Infosys</p>
+                  </div>
+                </div>
+                <p class="exp-date">Feb 2025 — May 2025 • Team of 7</p>
+                <ul class="exp-list">
+                  <li>IaC with Bicep for Azure VM provisioning</li>
+                  <li>Azure DevOps pipelines for UI & Tosca projects</li>
+                  <li>Security & compliance checks in CI/CD</li>
+                  <li>Multi-environment deployment workflows</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 6: Payapt -->
+          <section class="reel-slide" data-slide="5">
+            <div class="slide-bg bg-exp3"></div>
+            <div class="slide-content">
+              <span class="slide-label">Project</span>
+              <div class="exp-card">
+                <div class="exp-header">
+                  <div class="exp-logo client">PAY</div>
+                  <div>
+                    <h3>DevOps Engineer</h3>
+                    <p class="exp-company">Payapt • Primesoft</p>
+                  </div>
+                </div>
+                <p class="exp-date">Oct 2022 — Feb 2025 • Team of 10</p>
+                <ul class="exp-list">
+                  <li>CI/CD with Git, Azure DevOps, Maven & K8s</li>
+                  <li>Java microservices on AWS EKS & ECR</li>
+                  <li>Jenkins pipelines for multi-app deployments</li>
+                  <li>AWS EC2, RDS, S3, ELB & auto-scaling</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 7: Infinite -->
+          <section class="reel-slide" data-slide="6">
+            <div class="slide-bg bg-exp4"></div>
+            <div class="slide-content">
+              <span class="slide-label">Project</span>
+              <div class="exp-card">
+                <div class="exp-header">
+                  <div class="exp-logo client">∞</div>
+                  <div>
+                    <h3>Cloud Engineer</h3>
+                    <p class="exp-company">Infinite • Primesoft</p>
+                  </div>
+                </div>
+                <p class="exp-date">Oct 2022 — Present • Team of 8</p>
+                <ul class="exp-list">
+                  <li>Azure VM deployment & Tomcat optimization</li>
+                  <li>Docker containerization & Dockerfile automation</li>
+                  <li>Docker Compose for MongoDB, PostgreSQL, ELK</li>
+                  <li>Container health monitoring & performance tuning</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 8: Certifications -->
+          <section class="reel-slide" data-slide="7">
+            <div class="slide-bg bg-certs"></div>
+            <div class="slide-content">
+              <span class="slide-label">Certified</span>
+              <h2 class="slide-title">Microsoft<br>Azure Expert</h2>
+              <div class="cert-cards">
+                <div class="cert-card">
+                  <div class="cert-badge">🏆</div>
+                  <div>
+                    <h3>AZ-400</h3>
+                    <p>Azure DevOps Expert</p>
+                  </div>
+                </div>
+                <div class="cert-card">
+                  <div class="cert-badge">🎖️</div>
+                  <div>
+                    <h3>AZ-104</h3>
+                    <p>Azure Administrator</p>
+                  </div>
+                </div>
+                <div class="cert-card">
+                  <div class="cert-badge">📜</div>
+                  <div>
+                    <h3>AZ-900</h3>
+                    <p>Azure Fundamentals</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 9: Education -->
+          <section class="reel-slide" data-slide="8">
+            <div class="slide-bg bg-edu"></div>
+            <div class="slide-content">
+              <span class="slide-label">Education</span>
+              <h2 class="slide-title">Academic<br>Background</h2>
+              <div class="edu-cards">
+                <div class="edu-card">
+                  <span class="edu-year">2012–2016</span>
+                  <h3>B.Tech Civil Engineering</h3>
+                  <p>Chirala Engineering College, JNTUK</p>
+                  <span class="edu-grade">62.88%</span>
+                </div>
+                <div class="edu-card small">
+                  <span class="edu-year">Intermediate</span>
+                  <p>Board of Education, Guntur — 67%</p>
+                </div>
+                <div class="edu-card small">
+                  <span class="edu-year">SSC (10th)</span>
+                  <p>Bhattiprolu, AP — 64%</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Slide 10: Contact -->
+          <section class="reel-slide" data-slide="9">
+            <div class="slide-bg bg-contact"></div>
+            <div class="slide-content contact-content">
+              <span class="slide-label">Let's Connect</span>
+              <h2 class="slide-title">Hire Me<br>Today</h2>
+              <p class="slide-text">Open to DevOps, SRE & Cloud Engineering opportunities.</p>
+              <div class="contact-links">
+                <a href="mailto:Vishnumolakalasai29@gmail.com" class="contact-btn email">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Vishnumolakalasai29@gmail.com
+                </a>
+                <a href="tel:+919032548058" class="contact-btn phone">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  +91 9032548058
+                </a>
+                <a href="assets/resume.pdf" download class="contact-btn download">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download Resume PDF
+                </a>
+              </div>
+              <p class="contact-location">📍 Bangalore, India</p>
+            </div>
+          </section>
+
+        </main>
+
+        <!-- Bottom caption -->
+        <footer class="reel-caption" id="reelCaption">
+          <p><strong>manikanta_devops</strong> DevOps & SRE Engineer | AWS • Azure • Kubernetes | 4+ Years Experience ☁️</p>
+        </footer>
+
+        <!-- Navigation hints -->
+        <div class="nav-hint" id="navHint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+          <span>Swipe up</span>
+        </div>
+
+        <!-- Slide counter -->
+        <div class="slide-counter" id="slideCounter">1 / 10</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
