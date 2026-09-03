@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vishnumolakala Manikanta Sai - DevOps and Site Reliability Engineer">
-  <title>Manikanta Sai | Cinematic Resume</title>
+  <meta name="description" content="Vishnumolakala Manikanta Sai — DevOps & Site Reliability Engineer. AWS, Azure, Kubernetes.">
+  <title>Manikanta Sai | DevOps Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="loader" class="loader">
+  <!-- Loader -->
+  <div id="loader" class="loader" aria-live="polite">
     <div class="loader-inner">
       <p class="loader-brand">Manikanta.</p>
       <p class="loader-percent" id="loaderPercent">0%</p>
@@ -19,30 +20,35 @@
     </div>
   </div>
 
+  <!-- Nav -->
   <header class="site-header">
-    <div class="brand">Manikanta.</div>
-    <nav class="top-nav">
+    <a href="#home" class="brand">Manikanta.</a>
+    <nav class="top-nav" aria-label="Primary">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Expertise</a>
       <a href="#experience">Experience</a>
+      <a href="#certs">Certifications</a>
       <a href="#contact" class="hire-btn">Hire Me</a>
     </nav>
   </header>
 
   <main>
+    <!-- Hero: scroll-scrub cinematic -->
     <section id="home" class="hero">
       <div class="hero-sticky">
         <div class="hero-grid">
           <div class="hero-copy left">
-            <p class="small-label">DevOps Engineer</p>
+            <p class="small-label">DevOps &amp; SRE</p>
             <h1 id="heroTitle">CREATIVE<br>DEVOPS</h1>
             <p id="heroSub">Automating reliable cloud systems for modern teams.</p>
           </div>
+
           <div class="hero-media">
-            <img id="heroImageA" src="assets/profile-headshot.jpg" alt="Manikanta headshot">
-            <img id="heroImageB" src="assets/profile-full.jpg" alt="Manikanta full portrait">
+            <img id="heroImageA" src="assets/profile-headshot.jpg" alt="Manikanta Sai professional headshot" width="840" height="1120">
+            <img id="heroImageB" src="assets/profile-full.jpg" alt="Manikanta Sai full portrait" width="840" height="1120">
           </div>
+
           <div class="hero-copy right">
             <p class="small-label">4+ Years</p>
             <h2 id="heroSide">AWS / AZURE / KUBERNETES</h2>
@@ -52,96 +58,176 @@
       </div>
     </section>
 
-    <section id="about" class="content-section">
+    <!-- About -->
+    <section id="about" class="content-section reveal">
+      <p class="section-kicker">01 — Profile</p>
       <h2>System Profile</h2>
       <div class="card">
         <p>
-          DevOps and Site Reliability Engineer with 4 years of experience managing scalable, production-grade systems across AWS and Azure cloud platforms. Specialized in Kubernetes orchestration, Terraform Infrastructure as Code, and secure CI/CD delivery.
+          DevOps and Site Reliability Engineer with <strong>4 years</strong> of experience managing scalable,
+          production-grade systems across <strong>AWS</strong> and <strong>Azure</strong>. Specialized in
+          Kubernetes orchestration and cluster management, Infrastructure as Code with Terraform, and robust
+          CI/CD pipelines for secure, reliable deployments. Experienced in end-to-end monitoring, alerting,
+          and incident response for high availability.
         </p>
       </div>
       <div class="metrics">
         <div class="metric"><strong>4+</strong><span>Years Experience</span></div>
-        <div class="metric"><strong>24x7</strong><span>Production Support</span></div>
+        <div class="metric"><strong>24×7</strong><span>Production Support</span></div>
         <div class="metric"><strong>3</strong><span>Azure Certifications</span></div>
       </div>
     </section>
 
-    <section id="skills" class="content-section">
+    <!-- Skills -->
+    <section id="skills" class="content-section reveal">
+      <p class="section-kicker">02 — Stack</p>
       <h2>Technologies I Work With</h2>
-      <div class="chip-box">
-        <span>AWS</span><span>Azure</span><span>AKS</span><span>EKS</span><span>ACR</span><span>ACI</span><span>ARO</span>
-        <span>Docker</span><span>Kubernetes</span><span>Terraform</span><span>Bicep</span><span>Azure DevOps</span>
-        <span>Jenkins</span><span>Maven</span><span>CloudWatch</span><span>Azure Monitor</span><span>ELK</span>
-        <span>RDS</span><span>MongoDB</span><span>Nginx</span><span>Apache</span><span>Tomcat</span>
-        <span>PowerShell</span><span>YAML</span><span>Linux</span>
+      <div class="skill-groups">
+        <div class="skill-block">
+          <h3>Cloud Platforms</h3>
+          <div class="chip-box">
+            <span>AWS</span><span>Microsoft Azure</span><span>EC2</span><span>S3</span><span>IAM</span>
+            <span>AKS</span><span>ACR</span><span>ACI</span><span>ARO</span><span>EKS</span><span>ECR</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3>DevOps &amp; IaC</h3>
+          <div class="chip-box">
+            <span>Docker</span><span>Kubernetes</span><span>Terraform</span><span>Bicep</span>
+            <span>Azure DevOps</span><span>Jenkins</span><span>Maven</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3>Monitoring &amp; Data</h3>
+          <div class="chip-box">
+            <span>CloudWatch</span><span>Azure Monitor</span><span>Log Analytics</span><span>ELK</span>
+            <span>AppLens</span><span>RDS</span><span>MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-block">
+          <h3>Languages &amp; Servers</h3>
+          <div class="chip-box">
+            <span>PowerShell</span><span>YAML</span><span>Linux</span><span>Windows</span>
+            <span>Nginx</span><span>Apache</span><span>Tomcat</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="experience" class="content-section">
+    <!-- Experience -->
+    <section id="experience" class="content-section reveal">
+      <p class="section-kicker">03 — Work</p>
       <h2>Core Execution Root Map</h2>
       <div class="timeline">
-        <article class="card">
-          <h3>Senior Associate Consultant - Infosys</h3>
-          <p class="meta">Bangalore | May 2025 - Present</p>
+        <article class="card exp">
+          <div class="exp-top">
+            <h3>Senior Associate Consultant</h3>
+            <span class="badge">Current</span>
+          </div>
+          <p class="meta">Infosys · Bangalore · May 2025 – Present</p>
           <ul>
-            <li>Troubleshooting complex AKS platform issues and ensuring high availability.</li>
-            <li>Resolution across ARO, ACI, and ACR environments with RCA ownership.</li>
-            <li>Incident management with AppLens, Azure Security Center, and DFM workflows.</li>
+            <li>Troubleshoot and resolve complex issues in Azure Kubernetes Service (AKS) for high availability.</li>
+            <li>Diagnose deployment and platform issues across ARO, ACI, and ACR.</li>
+            <li>Handle Production Severity A incidents with RCA and permanent fixes.</li>
+            <li>Use Azure Security Center, AppLens, and Jarvis for security and performance analysis.</li>
+            <li>Manage operational incidents via Dynamics 365 (DFM) with stakeholder communication.</li>
           </ul>
         </article>
-        <article class="card">
-          <h3>DevOps Engineer - Musgrave (Infosys)</h3>
-          <p class="meta">Feb 2025 - May 2025</p>
+
+        <article class="card exp">
+          <div class="exp-top">
+            <h3>DevOps Engineer — Musgrave</h3>
+          </div>
+          <p class="meta">Infosys · Team of 7 · Feb 2025 – May 2025</p>
           <ul>
-            <li>IaC automation for Azure VMs using Bicep templates.</li>
-            <li>Azure DevOps CI/CD pipelines for UI and Tosca project streams.</li>
+            <li>Implemented IaC with Bicep to automate Azure VM and related resource provisioning.</li>
+            <li>Designed and maintained Azure DevOps pipelines for UI and Tosca projects.</li>
+            <li>Integrated security and compliance checks into CI/CD to reduce manual deployment risk.</li>
           </ul>
         </article>
-        <article class="card">
-          <h3>DevOps Engineer - Payapt (Primesoft)</h3>
-          <p class="meta">Oct 2022 - Feb 2025</p>
+
+        <article class="card exp">
+          <div class="exp-top">
+            <h3>DevOps Engineer — Payapt</h3>
+          </div>
+          <p class="meta">Primesoft, Hyderabad · Team of 10 · Oct 2022 – Feb 2025</p>
           <ul>
-            <li>Integrated Git, Azure DevOps, Maven, Jenkins, and Kubernetes for CI/CD.</li>
-            <li>Managed AWS services (EC2, RDS, S3, ELB) and EKS deployments.</li>
+            <li>Built CI/CD with Git, Azure DevOps, Maven, and Kubernetes for Java and UI apps.</li>
+            <li>Orchestrated Jenkins pipelines for Java microservices (JBoss and multi-app setups).</li>
+            <li>Provisioned Kubernetes workloads and deployed microservices on AWS EKS / ECR.</li>
+            <li>Managed AWS EC2, RDS, S3, auto-scaling, and ELB for reliable deployments.</li>
+          </ul>
+        </article>
+
+        <article class="card exp">
+          <div class="exp-top">
+            <h3>Cloud Engineer — Infinite</h3>
+          </div>
+          <p class="meta">Primesoft · Team of 8 · Oct 2022 – Present</p>
+          <ul>
+            <li>Deployed and optimized Azure VMs with Tomcat for Java JAR/WAR applications.</li>
+            <li>Containerized apps with Docker and Docker Compose (MongoDB, PostgreSQL, ELK, RabbitMQ).</li>
+            <li>Monitored container health and tuned performance to minimize downtime.</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2>Certifications and Education</h2>
+    <!-- Certs + Education -->
+    <section id="certs" class="content-section reveal">
+      <p class="section-kicker">04 — Credentials</p>
+      <h2>Certifications &amp; Education</h2>
       <div class="split-grid">
         <div class="card">
-          <h3>Microsoft Certifications</h3>
-          <ul>
-            <li>AZ-400: Azure DevOps Expert</li>
-            <li>AZ-104: Azure Administrator Associate</li>
-            <li>AZ-900: Azure Fundamentals</li>
+          <h3>Microsoft Certified</h3>
+          <ul class="clean-list">
+            <li><strong>AZ-400</strong> — Azure DevOps Expert</li>
+            <li><strong>AZ-104</strong> — Azure Administrator Associate</li>
+            <li><strong>AZ-900</strong> — Azure Fundamentals</li>
           </ul>
         </div>
         <div class="card">
           <h3>Education</h3>
-          <ul>
-            <li>B.Tech Civil Engineering - Chirala Engineering College (62.88%)</li>
-            <li>Intermediate - Board of Education, Guntur (67%)</li>
-            <li>SSC - Bhattiprolu, AP (64%)</li>
+          <ul class="clean-list">
+            <li><strong>B.Tech Civil Engineering</strong> — Chirala Engineering College (JNTUK), 2012–2016 · 62.88%</li>
+            <li><strong>Intermediate</strong> — Board of Education, Guntur · 67%</li>
+            <li><strong>SSC (10th)</strong> — Bhattiprolu, AP · 64%</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="content-section">
-      <h2>Contact & Resume</h2>
+    <!-- Contact -->
+    <section id="contact" class="content-section contact-section reveal">
+      <p class="section-kicker">05 — Contact</p>
+      <h2>Let’s Build Reliable Systems</h2>
+      <p class="contact-lead">Open to DevOps, SRE, and Cloud Engineering opportunities.</p>
       <div class="card contact-card">
-        <p>Email: <a href="mailto:Vishnumolakalasai29@gmail.com">Vishnumolakalasai29@gmail.com</a></p>
-        <p>Phone: <a href="tel:+919032548058">+91 9032548058</a></p>
-        <p>Location: Bangalore, India</p>
+        <div class="contact-rows">
+          <a href="mailto:Vishnumolakalasai29@gmail.com">
+            <span class="contact-label">Email</span>
+            <span>Vishnumolakalasai29@gmail.com</span>
+          </a>
+          <a href="tel:+919032548058">
+            <span class="contact-label">Phone</span>
+            <span>+91 9032548058</span>
+          </a>
+          <div>
+            <span class="contact-label">Location</span>
+            <span>Bangalore, India</span>
+          </div>
+        </div>
         <div class="cta-row">
           <a class="primary-btn" href="assets/resume.pdf" download>Download Resume PDF</a>
+          <a class="ghost-btn" href="mailto:Vishnumolakalasai29@gmail.com">Email Me</a>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Vishnumolakala Manikanta Sai</p>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
