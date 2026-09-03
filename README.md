@@ -1,6 +1,6 @@
-# Manikanta Sai — Instagram Reel Resume
+# Manikanta Sai — Cinematic Resume Portfolio
 
-An interactive, Instagram Reels-style portfolio resume for **Vishnumolakala Manikanta Sai**, DevOps & Site Reliability Engineer.
+A cinematic dark-theme portfolio resume for **Vishnumolakala Manikanta Sai**, inspired by scroll-driven creative portfolio layouts.
 
 ## Live Demo
 
@@ -8,25 +8,20 @@ Visit the site after enabling GitHub Pages: `https://manikantasaiv26.github.io/M
 
 ## Features
 
-- **Reels-style vertical scrolling** — swipe up/down through 10 full-screen slides
-- **Instagram UI** — story progress bars, like/comment/share buttons, profile header
-- **Double-tap to like** — just like Instagram
-- **Mobile-first** — full screen on phones, phone frame on desktop
-- **Keyboard navigation** — arrow keys to navigate slides
-- **Download resume** — PDF available on the contact slide and side panel
+- **Cinematic loader** — animated 0–100% loading intro
+- **Scroll-scrub hero** — sticky hero scene with text transitions and image crossfade
+- **Dark premium UI** — fixed top nav, glass cards, spacious layout
+- **Resume content sections** — profile, skills, experience, certifications, education, contact
+- **Download resume** button linked to local PDF
 
-## Slides
+## Sections
 
-1. Hero — Name, photo, key stats
-2. About — Professional profile
-3. Skills — Cloud, DevOps, Monitoring, Languages
-4. Current Role — Infosys (Azure AKS/ARO)
-5. Project — Musgrave (Bicep IaC)
-6. Project — Payapt (AWS EKS)
-7. Project — Infinite (Docker/Azure)
-8. Certifications — AZ-400, AZ-104, AZ-900
-9. Education — B.Tech & more
-10. Contact — Email, phone, resume download
+1. Hero timeline (scroll-driven)
+2. System Profile
+3. Technologies
+4. Experience timeline
+5. Certifications & Education
+6. Contact + resume download
 
 ## Local Development
 
@@ -50,7 +45,7 @@ Open `http://localhost:8080` in your browser.
 ## Tech Stack
 
 - Vanilla HTML, CSS, JavaScript
-- CSS Scroll Snap for reel navigation
+- Scroll-based animation with vanilla JavaScript
 - No frameworks or build tools required
 
 ## Contact
